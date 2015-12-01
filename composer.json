@@ -40,6 +40,9 @@
             "homepage": "http://hiqdev.com/"
         }
     ],
+    "replace": {
+        "yiisoft/yii2": "self.version"
+    },
     "autoload": {
         "psr-4": {
             "minii\\": "src"
