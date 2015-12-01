@@ -3,6 +3,7 @@ hiqdev/minii changelog
 
 ## Under development
 
+- Added basics
 
-## Development started
+## Development started 2015-12-01
 
