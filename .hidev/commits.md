@@ -4,6 +4,7 @@ hiqdev/minii-core commits history
 ## Under development
 
 - Added basics
+    - 8d43b94 2015-12-01 renamed to `minii/core` (sol@hiqdev.com)
     - 2b31a5d 2015-12-01 changed namespace to yii <- minii (sol@hiqdev.com)
     - 339b274 2015-12-01 + composer.json replace (sol@hiqdev.com)
     - 1aeafab 2015-12-01 added base, di, Yii (sol@hiqdev.com)
