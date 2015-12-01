@@ -1,0 +1,10 @@
+package:
+    type:           project
+    name:           minii
+    namespace:      minii
+    title:          Minii
+    keywords:       minii
+
+require:
+    hiqdev/hidev-hiqdev: "*"
+    hiqdev/hidev-php:    "*"
