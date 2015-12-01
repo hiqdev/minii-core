@@ -1,9 +1,12 @@
 package:
-    type:           project
-    name:           minii
+    type:           library
+    name:           minii-core
     namespace:      yii
-    title:          Minii
+    title:          minii Core
     keywords:       minii
+
+composer.json:
+    name:           minii/core
 
 require:
     hiqdev/hidev-hiqdev: "*"

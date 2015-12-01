@@ -1,5 +1,5 @@
-hiqdev/minii commits history
-----------------------------
+hiqdev/minii-core commits history
+---------------------------------
 
 ## Under development
 

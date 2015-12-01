@@ -1,5 +1,5 @@
-hiqdev/minii changelog
-----------------------
+hiqdev/minii-core changelog
+---------------------------
 
 ## Under development
 

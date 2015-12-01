@@ -1,17 +1,27 @@
-Minii
-=====
+minii Core
+==========
 
-[![Latest Stable Version](https://poser.pugx.org/hiqdev/minii/v/stable)](//packagist.org/packages/hiqdev/minii)
-[![Total Downloads](https://poser.pugx.org/hiqdev/minii/downloads)](//packagist.org/packages/hiqdev/minii)
-[![Build Status](https://img.shields.io/travis/hiqdev/minii.svg)](http://travis-ci.org/hiqdev/minii)
+[![Latest Stable Version](https://poser.pugx.org/hiqdev/minii-core/v/stable)](//packagist.org/packages/hiqdev/minii-core)
+[![Total Downloads](https://poser.pugx.org/hiqdev/minii-core/downloads)](//packagist.org/packages/hiqdev/minii-core)
+[![Build Status](https://img.shields.io/travis/hiqdev/minii-core.svg)](http://travis-ci.org/hiqdev/minii-core)
 
 ## Installation
 
-The preferred way to install this project is through [composer](http://getcomposer.org/download/).
+The preferred way to install this library is through [composer](http://getcomposer.org/download/).
+
+Either run
 
 ```sh
-php composer.phar create-project "hiqdev/minii:*" directory2install
+php composer.phar require "minii/core"
 ```
+
+or add
+
+```json
+"hiqdev/minii-core": "*"
+```
+
+to the require section of your composer.json.
 
 ## License
 

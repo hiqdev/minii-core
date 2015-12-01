@@ -1,11 +1,11 @@
 {
-    "name": "hiqdev/minii",
+    "name": "minii/core",
     "type": "project",
-    "description": "Minii",
+    "description": "minii Core",
     "keywords": [
         "minii"
     ],
-    "homepage": "https://github.com/hiqdev/minii",
+    "homepage": "https://github.com/hiqdev/minii-core",
     "license": "BSD-3-Clause",
     "support": {
         "email": "support@hiqdev.com",
