@@ -86,6 +86,14 @@ class BaseYii
      */
     public static $container;
 
+    public static function getContainer()
+    {
+        if (static::$container === null) {
+            static::$container = new \yii\di\Container();
+        }
+
+        return static::$container;
+    }
 
     /**
      * Returns a string representing the current version of the Yii framework.
@@ -269,7 +277,7 @@ class BaseYii
      * @param string $className the fully qualified class name without a leading backslash "\"
      * @throws UnknownClassException if the class does not exist in the class file
      */
-    public static function autoload($className)
+    /*public static function autoload($className)
     {
         if (isset(static::$classMap[$className])) {
             $classFile = static::$classMap[$className];
@@ -290,7 +298,7 @@ class BaseYii
         if (YII_DEBUG && !class_exists($className, false) && !interface_exists($className, false) && !trait_exists($className, false)) {
             throw new UnknownClassException("Unable to find '$className' in file: $classFile. Namespace missing?");
         }
-    }
+    }*/
 
     /**
      * Creates a new object using the given configuration.
@@ -337,11 +345,11 @@ class BaseYii
     public static function createObject($type, array $params = [])
     {
         if (is_string($type)) {
-            return static::$container->get($type, $params);
+            return static::getContainer()->get($type, $params);
         } elseif (is_array($type) && isset($type['class'])) {
             $class = $type['class'];
             unset($type['class']);
-            return static::$container->get($class, $params, $type);
+            return static::getContainer()->get($class, $params, $type);
         } elseif (is_callable($type, true)) {
             return call_user_func($type, $params);
         } elseif (is_array($type)) {
