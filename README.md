@@ -12,7 +12,7 @@ The preferred way to install this library is through [composer](http://getcompos
 Either run
 
 ```sh
-php composer.phar require "minii/core"
+php composer.phar require "hiqdev/minii-core"
 ```
 
 or add

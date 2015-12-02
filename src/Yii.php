@@ -7,7 +7,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-require(__DIR__ . '/src/BaseYii.php');
+# require(__DIR__ . '/src/BaseYii.php');
 
 /**
  * Yii is a helper class serving common framework functionalities.
@@ -22,6 +22,6 @@ class Yii extends \yii\BaseYii
 {
 }
 
-spl_autoload_register(['Yii', 'autoload'], true, true);
+#spl_autoload_register(['Yii', 'autoload'], true, true);
 # Yii::$classMap = require(__DIR__ . '/classes.php');
-Yii::$container = new yii\di\Container();
+#Yii::$container = new yii\di\Container();
