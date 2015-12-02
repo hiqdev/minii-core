@@ -4,6 +4,9 @@ hiqdev/minii-core commits history
 ## Under development
 
 - Added basics
+    - d1bfe34 2015-12-02 + prepareExtensions from composer/installed.json (sol@hiqdev.com)
+    - b541935 2015-12-02 returned back container initialization and autoloader (sol@hiqdev.com)
+    - f3391dd 2015-12-02 + BaseYii::getContainer (sol@hiqdev.com)
     - 75bcd50 2015-12-02 trying composer autoload files (sol@hiqdev.com)
     - 29fb819 2015-12-02 trying composer replace (sol@hiqdev.com)
     - 89d8d61 2015-12-01 added log directory (sol@hiqdev.com)
