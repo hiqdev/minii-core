@@ -46,6 +46,6 @@
         }
     },
     "replace": {
-        "yiisoft/yii2": "self.version"
+        "yiisoft/yii2": "*"
     }
 }
