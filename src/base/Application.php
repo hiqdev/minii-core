@@ -267,6 +267,34 @@ abstract class Application extends Module
         $this->bootstrap();
     }
 
+    public function prepareExtensions($vendorDir)
+    {
+        $file = $vendorDir . '/composer/installed.json';
+        if (!is_file($file)) {
+            return [];
+        }
+        $packages = json_decode(file_get_contents($file), true);
+        $res = [];
+        foreach ($packages as $k => $v) {
+            $name = $v['name'];
+            $aliases = [];
+            if (isset($v['autoload']['psr-4'])) {
+                foreach ($v['autoload']['psr-4'] as $a => $d) {
+                    $aliases['@' . substr(strtr($a, '\\', '/'), 0, -1)] = $vendorDir . '/' . $name . ($d ? '/' . $d : '');
+                }
+            }
+            $res[$v['name']] = [
+                'name'      => $v['name'],
+                'version'   => $v['version_normalized'],
+                'reference' => $v['dist']['reference'],
+                'alias'     => $aliases,
+                'aliases'   => $aliases,
+            ];
+        }
+
+        return $res;
+    }
+
     /**
      * Initializes extensions and executes bootstrap components.
      * This method is called by [[init()]] after the application has been fully configured.
@@ -275,8 +303,7 @@ abstract class Application extends Module
     protected function bootstrap()
     {
         if ($this->extensions === null) {
-            $file = Yii::getAlias('@vendor/yiisoft/extensions.php');
-            $this->extensions = is_file($file) ? include($file) : [];
+            $this->extensions = $this->prepareExtensions(Yii::getAlias('@vendor'));
         }
         foreach ($this->extensions as $extension) {
             if (!empty($extension['alias'])) {
