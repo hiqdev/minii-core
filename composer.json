@@ -1,7 +1,7 @@
 {
     "name": "minii/core",
     "type": "project",
-    "description": "minii Core",
+    "description": "minii - mini Yii",
     "keywords": [
         "minii"
     ],

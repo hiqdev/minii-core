@@ -1,9 +1,30 @@
 minii Core
 ==========
 
+**minii - mini Yii**
+
 [![Latest Stable Version](https://poser.pugx.org/minii/core/v/stable)](//packagist.org/packages/minii/core)
 [![Total Downloads](https://poser.pugx.org/minii/core/downloads)](//packagist.org/packages/minii/core)
 [![Build Status](https://img.shields.io/travis/hiqdev/minii-core.svg)](http://travis-ci.org/hiqdev/minii-core)
+
+General goals:
+- less yii specific dependencies
+- more PSR compatibility: PSR-3 and so on
+- easier creation of console only application
+- compatibility with yii2 extensions
+- passing yii2 tests
+
+Done:
+- splitted to parts: core, console, caching, ...
+- no more `composer global require fxp/composer-asset-plugin`
+- no need for `yii2-composer`, loading extensions done in other way, see `yii\base\Application::prepareExtensions`
+- no more `require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php'`, done with composer autoload files
+- working for console apps
+
+To do:
+- rm log from core, use psr-3 logging
+- make it working for web apps
+- much more...
 
 ## Installation
 
