@@ -276,7 +276,6 @@ class BaseYii
                 $classFile = static::getAlias($classFile);
             }
         } elseif (strpos($className, '\\') !== false) {
-            $a = '@' . str_replace('\\', '/', $className) . '.php';
             $classFile = static::getAlias('@' . str_replace('\\', '/', $className) . '.php', false);
             if ($classFile === false || !is_file($classFile)) {
                 return;
