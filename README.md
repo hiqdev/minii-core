@@ -8,7 +8,10 @@ minii Core
 [![Build Status](https://img.shields.io/travis/hiqdev/minii-core.svg)](http://travis-ci.org/hiqdev/minii-core)
 
 **General goals:**
-- less yii specific dependencies
+- less specific dependencies:
+    - fxp/composer-asset-plugin and bower-asset/jquery...
+    - yii2-composer
+    - require Yii.php
 - more PSR compatibility: PSR-3 and so on
 - easier creation of console only application
 - compatibility with yii2 extensions
