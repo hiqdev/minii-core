@@ -1,8 +1,8 @@
 minii Core
 ==========
 
-[![Latest Stable Version](https://poser.pugx.org/hiqdev/minii-core/v/stable)](//packagist.org/packages/hiqdev/minii-core)
-[![Total Downloads](https://poser.pugx.org/hiqdev/minii-core/downloads)](//packagist.org/packages/hiqdev/minii-core)
+[![Latest Stable Version](https://poser.pugx.org/minii/core/v/stable)](//packagist.org/packages/minii/core)
+[![Total Downloads](https://poser.pugx.org/minii/core/downloads)](//packagist.org/packages/minii/core)
 [![Build Status](https://img.shields.io/travis/hiqdev/minii-core.svg)](http://travis-ci.org/hiqdev/minii-core)
 
 ## Installation
