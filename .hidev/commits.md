@@ -3,7 +3,11 @@ hiqdev/minii-core commits history
 
 ## Under development
 
+
+## 0.0.1 2015-12-03
+
 - Added basics
+    - 9b8bb8b 2015-12-03 improved description (sol@hiqdev.com)
     - b51a6be 2015-12-03 fixed packagist badges (sol@hiqdev.com)
     - d1bfe34 2015-12-02 + prepareExtensions from composer/installed.json (sol@hiqdev.com)
     - b541935 2015-12-02 returned back container initialization and autoloader (sol@hiqdev.com)
