@@ -3,9 +3,9 @@ minii Core
 
 **minii - mini Yii**
 
-[![Latest Stable Version](https://poser.pugx.org/minii/core/v/stable)](//packagist.org/packages/minii/core)
-[![Total Downloads](https://poser.pugx.org/minii/core/downloads)](//packagist.org/packages/minii/core)
-[![Build Status](https://img.shields.io/travis/hiqdev/minii-core.svg)](http://travis-ci.org/hiqdev/minii-core)
+[![Latest Stable Version](https://poser.pugx.org/minii/core/v/stable)](https://packagist.org/packages/minii/core)
+[![Total Downloads](https://poser.pugx.org/minii/core/downloads)](https://packagist.org/packages/minii/core)
+[![Build Status](https://img.shields.io/travis/hiqdev/minii-core.svg)](https://travis-ci.org/hiqdev/minii-core)
 
 **General goals:**
 - less specific dependencies:

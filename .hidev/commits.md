@@ -3,6 +3,10 @@ hiqdev/minii-core commits history
 
 ## Under development
 
+- Removed autooload `src/Yii.php`
+    - c247d84 2015-12-14 deleted autoload src/Yii cause it makes problems for other packages (sol@hiqdev.com)
+- Fixed phar compatibility
+    - 5141020 2015-12-14 fix for phar compatibility (sol@hiqdev.com)
 
 ## 0.0.1 2015-12-03
 
