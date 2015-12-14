@@ -3,6 +3,7 @@ hiqdev/minii-core commits history
 
 ## Under development
 
+    - 6c2cc34 2015-12-14 trying classmap autoloading (sol@hiqdev.com)
 
 ## 0.0.2 2015-12-14
 
