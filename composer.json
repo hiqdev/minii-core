@@ -41,9 +41,7 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-            "yii\\": "src"
-        }
+        "classmap": ["src/"]
     },
     "replace": {
         "yiisoft/yii2": "*"
