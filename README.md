@@ -21,12 +21,12 @@ minii Core
 - splitted to parts: core, console, caching, ...
 - no more `composer global require fxp/composer-asset-plugin`
 - no need for `yii2-composer`, loading extensions done in other way, see `yii\base\Application::prepareExtensions`
-- no more `require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php'`, done with composer autoload files
 - working for console apps
 
 **To do:**
 - rm log from core, use psr-3 logging
 - make it working for web apps
+- think of getting rid of `require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php'`
 - much more...
 
 ## Installation

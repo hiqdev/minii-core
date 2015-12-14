@@ -3,7 +3,10 @@ hiqdev/minii-core changelog
 
 ## Under development
 
-- Removed autooload `src/Yii.php`
+
+## 0.0.2 2015-12-14
+
+- Changed: redone bootstrapping
 - Fixed phar compatibility
 
 ## 0.0.1 2015-12-03
