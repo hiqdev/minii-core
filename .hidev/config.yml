@@ -11,14 +11,13 @@ package:
     description:    |
         **General goals:**
 
+        - full compatibility with yii2 including tests
         - less specific dependencies:
             - fxp/composer-asset-plugin and bower-asset/jquery...
             - yii2-composer
             - require Yii.php
         - more PSR compatibility: PSR-3 and so on
         - easier creation of console only application
-        - compatibility with yii2 extensions
-        - passing yii2 tests
 
         **Done:**
 
@@ -32,8 +31,9 @@ package:
 
         **To do:**
 
-        - remove log from core, use psr-3 logging
         - make it working for web apps
+        - passing yii2 tests
+        - remove log from core, use psr-3 logging
         - much more...
 
 require:
