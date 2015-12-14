@@ -8,6 +8,7 @@ minii Core
 [![Build Status](https://img.shields.io/travis/hiqdev/minii-core.svg)](https://travis-ci.org/hiqdev/minii-core)
 
 **General goals:**
+
 - less specific dependencies:
     - fxp/composer-asset-plugin and bower-asset/jquery...
     - yii2-composer
@@ -18,15 +19,19 @@ minii Core
 - passing yii2 tests
 
 **Done:**
+
 - splitted to parts: core, console, caching, ...
 - no more `composer global require fxp/composer-asset-plugin`
-- no need for `yii2-composer`, loading extensions done in other way, see `yii\base\Application::prepareExtensions`
+- no more `yii2-composer`, loading extensions done in other way, see `yii\base\Application::prepareExtensions`
+- no more `require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php'`
+- no more classes.php
 - working for console apps
+- compatible with phar packaging
 
 **To do:**
-- rm log from core, use psr-3 logging
+
+- remove log from core, use psr-3 logging
 - make it working for web apps
-- think of getting rid of `require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php'`
 - much more...
 
 ## Installation
@@ -36,13 +41,13 @@ The preferred way to install this library is through [composer](http://getcompos
 Either run
 
 ```sh
-php composer.phar require "hiqdev/minii-core"
+php composer.phar require "minii/core"
 ```
 
 or add
 
 ```json
-"hiqdev/minii-core": "*"
+"minii/core": "*"
 ```
 
 to the require section of your composer.json.
@@ -52,4 +57,4 @@ to the require section of your composer.json.
 This project is released under the terms of the BSD-3-Clause [license](LICENSE).
 Read more [here](http://choosealicense.com/licenses/bsd-3-clause).
 
-Copyright © 2015, HiQDev (http://hiqdev.com/)
+Copyright © 2015, HiQDev (http://hiqdev.com/minii)

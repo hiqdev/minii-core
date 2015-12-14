@@ -1,13 +1,16 @@
-hiqdev/minii-core commits history
----------------------------------
+minii/core commits history
+--------------------------
 
 ## Under development
 
-    - 6c2cc34 2015-12-14 trying classmap autoloading (sol@hiqdev.com)
 
 ## 0.0.2 2015-12-14
 
 - Changed: redone bootstrapping
+    - 50c723f 2015-12-14 used composer classmap (sol@hiqdev.com)
+    - 808260a 2015-12-14 - autoload.php, not needed (sol@hiqdev.com)
+    - b604cb3 2015-12-14 trying classmap autoloading (sol@hiqdev.com)
+    - 6c2cc34 2015-12-14 trying classmap autoloading (sol@hiqdev.com)
     - 7003b99 2015-12-14 improved bootstrapping (sol@hiqdev.com)
     - c247d84 2015-12-14 deleted autoload src/Yii cause it makes problems for other packages (sol@hiqdev.com)
 - Fixed phar compatibility

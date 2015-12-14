@@ -1,12 +1,16 @@
+github:
+    name:           hiqdev/minii-core
+
 package:
     type:           library
-    name:           minii-core
+    name:           core
     namespace:      yii
     headline:       minii Core
     title:          minii - mini Yii
-    keywords:       minii
+    keywords:       minii, core
     description:    |
         **General goals:**
+
         - less specific dependencies:
             - fxp/composer-asset-plugin and bower-asset/jquery...
             - yii2-composer
@@ -17,20 +21,21 @@ package:
         - passing yii2 tests
 
         **Done:**
+
         - splitted to parts: core, console, caching, ...
         - no more `composer global require fxp/composer-asset-plugin`
-        - no need for `yii2-composer`, loading extensions done in other way, see `yii\base\Application::prepareExtensions`
+        - no more `yii2-composer`, loading extensions done in other way, see `yii\base\Application::prepareExtensions`
+        - no more `require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php'`
+        - no more classes.php
         - working for console apps
+        - compatible with phar packaging
 
         **To do:**
-        - rm log from core, use psr-3 logging
+
+        - remove log from core, use psr-3 logging
         - make it working for web apps
-        - think of getting rid of `require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php'`
         - much more...
 
-composer.json:
-    name:           minii/core
-
 require:
-    hiqdev/hidev-hiqdev: "*"
-    hiqdev/hidev-php:    "*"
+    minii/hidev-vendor: "*"
+    hiqdev/hidev-php:   "*"
