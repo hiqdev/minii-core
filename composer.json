@@ -43,10 +43,7 @@
     "autoload": {
         "psr-4": {
             "yii\\": "src"
-        },
-        "files": [
-            "src/Yii.php"
-        ]
+        }
     },
     "replace": {
         "yiisoft/yii2": "*"
