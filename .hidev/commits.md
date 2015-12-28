@@ -3,6 +3,7 @@ minii/core commits history
 
 ## Under development
 
+    - e586a81 2015-12-28 changed @bower and @npm in yii\base\Application (sol@hiqdev.com)
 
 ## 0.0.2 2015-12-14
 

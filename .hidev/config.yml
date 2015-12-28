@@ -21,7 +21,7 @@ package:
 
         **Done:**
 
-        - splitted to parts: core, console, caching, ...
+        - splitted to parts: core, console, caching, i18n, web, mail, ...
         - no more `composer global require fxp/composer-asset-plugin`
         - no more `yii2-composer`, loading extensions done in other way, see `yii\base\Application::prepareExtensions`
         - no more `require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php'`
@@ -29,13 +29,32 @@ package:
         - working for console apps
         - compatible with phar packaging
 
+        **Changes made:**
+
+        - use of hiqdev/composer-asset-plugin
+        - changed @bower to @vendor/bower_components in yii\base\Application
+        - changed @npm to @vendor/node_modules in yii\base\Application
+        - PHAR compatibility
+
+        **Suggested changes to Yii:**
+
+        - think of breaking up helpers:
+            - Console to yii2-console
+            - Html, Url to yii2-web
+            - HtmlPurifier why not put it inside of Html ?
+            - ArrayHelper, StringHelper, Inflector to ???
+            - Markdown to yii2-markdown
+            - VarDumper to yii2-debug
+            - FormatConverter - ???
+        - drop yii\mail\BaseMailer dependency on yii\web\View for it could be used for console only apps
+        - think of yii\views
+        - PSR-3 logging, remove log from core
+
         **To do:**
 
-        - make it working for web apps
-        - passing yii2 tests
-        - remove log from core, use psr-3 logging
+        - break up tests
         - much more...
 
 require:
-    minii/hidev-vendor: "*"
     hiqdev/hidev-php:   "*"
+    minii/hidev-vendor: "*"
