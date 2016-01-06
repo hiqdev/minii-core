@@ -140,7 +140,7 @@ abstract class Application extends Module
      * @var array list of installed Yii extensions. Each array element represents a single extension
      * with the following structure:
      *
-     * ~~~
+     * ```php
      * [
      *     'name' => 'extension name',
      *     'version' => 'version number',
@@ -150,7 +150,7 @@ abstract class Application extends Module
      *         '@alias2' => 'to/path2',
      *     ],
      * ]
-     * ~~~
+     * ```
      *
      * The "bootstrap" class listed above will be instantiated during the application
      * [[bootstrap()|bootstrapping process]]. If the class implements [[BootstrapInterface]],
@@ -267,34 +267,6 @@ abstract class Application extends Module
         $this->bootstrap();
     }
 
-    public function prepareExtensions($vendorDir)
-    {
-        $file = $vendorDir . '/composer/installed.json';
-        if (!is_file($file)) {
-            return [];
-        }
-        $packages = json_decode(file_get_contents($file), true);
-        $res = [];
-        foreach ($packages as $k => $v) {
-            $name = $v['name'];
-            $aliases = [];
-            if (isset($v['autoload']['psr-4'])) {
-                foreach ($v['autoload']['psr-4'] as $a => $d) {
-                    $aliases['@' . substr(strtr($a, '\\', '/'), 0, -1)] = $vendorDir . '/' . $name . ($d ? '/' . $d : '');
-                }
-            }
-            $res[$v['name']] = [
-                'name'      => $v['name'],
-                'version'   => $v['version_normalized'],
-                'reference' => $v['dist']['reference'],
-                'alias'     => $aliases,
-                'aliases'   => $aliases,
-            ];
-        }
-
-        return $res;
-    }
-
     /**
      * Initializes extensions and executes bootstrap components.
      * This method is called by [[init()]] after the application has been fully configured.
@@ -303,7 +275,8 @@ abstract class Application extends Module
     protected function bootstrap()
     {
         if ($this->extensions === null) {
-            $this->extensions = $this->prepareExtensions(Yii::getAlias('@vendor'));
+            $file = Yii::getAlias('@vendor/yiisoft/extensions.php');
+            $this->extensions = is_file($file) ? include($file) : [];
         }
         foreach ($this->extensions as $extension) {
             if (!empty($extension['alias'])) {
@@ -314,10 +287,10 @@ abstract class Application extends Module
             if (isset($extension['bootstrap'])) {
                 $component = Yii::createObject($extension['bootstrap']);
                 if ($component instanceof BootstrapInterface) {
-                    Yii::trace("Bootstrap with " . get_class($component) . '::bootstrap()', __METHOD__);
+                    Yii::trace('Bootstrap with ' . get_class($component) . '::bootstrap()', __METHOD__);
                     $component->bootstrap($this);
                 } else {
-                    Yii::trace("Bootstrap with " . get_class($component), __METHOD__);
+                    Yii::trace('Bootstrap with ' . get_class($component), __METHOD__);
                 }
             }
         }
@@ -338,10 +311,10 @@ abstract class Application extends Module
             }
 
             if ($component instanceof BootstrapInterface) {
-                Yii::trace("Bootstrap with " . get_class($component) . '::bootstrap()', __METHOD__);
+                Yii::trace('Bootstrap with ' . get_class($component) . '::bootstrap()', __METHOD__);
                 $component->bootstrap($this);
             } else {
-                Yii::trace("Bootstrap with " . get_class($component), __METHOD__);
+                Yii::trace('Bootstrap with ' . get_class($component), __METHOD__);
             }
         }
     }
@@ -480,8 +453,8 @@ abstract class Application extends Module
     {
         $this->_vendorPath = Yii::getAlias($path);
         Yii::setAlias('@vendor', $this->_vendorPath);
-        Yii::setAlias('@bower', $this->_vendorPath . DIRECTORY_SEPARATOR . 'bower_components');
-        Yii::setAlias('@npm', $this->_vendorPath . DIRECTORY_SEPARATOR . 'node_modules');
+        Yii::setAlias('@bower', $this->_vendorPath . DIRECTORY_SEPARATOR . 'bower');
+        Yii::setAlias('@npm', $this->_vendorPath . DIRECTORY_SEPARATOR . 'npm');
     }
 
     /**
