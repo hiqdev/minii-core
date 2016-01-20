@@ -3,6 +3,9 @@ minii/core commits history
 
 ## Under development
 
+    - 162a53b 2016-01-06 synced with yii2 master branch (sol@hiqdev.com)
+    - 655c81b 2015-12-29 trying to enable tests (sol@hiqdev.com)
+    - 8825ec5 2015-12-28 + tests bootstrap (sol@hiqdev.com)
     - e586a81 2015-12-28 changed @bower and @npm in yii\base\Application (sol@hiqdev.com)
 
 ## 0.0.2 2015-12-14

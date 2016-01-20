@@ -12,12 +12,11 @@ minii Core
 **General goals:**
 
 - full compatibility with yii2 including tests
-- less specific dependencies:
+- less specific dependencies, remove:
     - fxp/composer-asset-plugin and bower-asset/jquery...
-    - yii2-composer
     - require Yii.php
 - more PSR compatibility: PSR-3 and so on
-- easier creation of console only application
+- easier creation of console only applications
 
 **Done:**
 
@@ -52,7 +51,7 @@ minii Core
 
 **To do:**
 
-- break up tests
+- split tests
 - much more...
 
 ## Installation
@@ -78,4 +77,4 @@ to the require section of your composer.json.
 This project is released under the terms of the BSD-3-Clause [license](LICENSE).
 Read more [here](http://choosealicense.com/licenses/bsd-3-clause).
 
-Copyright © 2015, HiQDev (http://hiqdev.com/minii)
+Copyright © 2015-2016, HiQDev (http://hiqdev.com/minii)
