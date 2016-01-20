@@ -3,6 +3,7 @@ minii/core changelog
 
 ## Under development
 
+- Changed synced with yii2 master branch
 
 ## 0.0.2 2015-12-14
 
