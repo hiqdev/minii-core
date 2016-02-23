@@ -1,9 +1,10 @@
 minii/core changelog
 --------------------
 
-## Under development
+## 0.0.3 2016-02-23
 
-- Changed synced with yii2 master branch
+- Added views
+- Changed: synced with yii2 master branch
 
 ## 0.0.2 2015-12-14
 

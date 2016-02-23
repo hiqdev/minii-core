@@ -9,6 +9,8 @@ minii Core
 [![Code Coverage](https://scrutinizer-ci.com/g/hiqdev/minii-core/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/minii-core/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hiqdev/minii-core/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hiqdev/minii-core/?branch=master)
 
+Minii is not another framework - it's a testing playground.
+
 **General goals:**
 
 - full compatibility with yii2 including tests

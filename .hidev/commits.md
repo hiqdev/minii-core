@@ -1,9 +1,12 @@
 minii/core commits history
 --------------------------
 
-## Under development
+## 0.0.3 2016-02-23
 
-- Changed synced with yii2 master branch
+- Added views
+    - 96258af 2016-02-23 + views (sol@hiqdev.com)
+- Changed: synced with yii2 master branch
+    - f7d8320 2016-02-23 updated to the latest state (sol@hiqdev.com)
     - b642a34 2016-01-20 rehideved (sol@hiqdev.com)
     - 162a53b 2016-01-06 synced with yii2 master branch (sol@hiqdev.com)
     - 655c81b 2015-12-29 trying to enable tests (sol@hiqdev.com)

@@ -4,11 +4,13 @@ github:
 package:
     type:           library
     name:           core
-    namespace:      yii
-    headline:       minii Core
     title:          minii - mini Yii
+    headline:       minii Core
     keywords:       minii, core
+    namespace:      yii
     description:    |
+        Minii is not another framework - it's a testing playground.
+
         **General goals:**
 
         - full compatibility with yii2 including tests
