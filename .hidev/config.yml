@@ -1,5 +1,5 @@
 github:
-    name:           hiqdev/minii-core
+    full_name:      hiqdev/minii-core
 
 package:
     type:           library
@@ -13,7 +13,7 @@ package:
 
         **General goals:**
 
-        - full compatibility with yii2 including tests
+        - split framework into components
         - less specific dependencies, remove:
             - fxp/composer-asset-plugin (used hiqdev/composer-asset-plugin instead)
             - require Yii.php
@@ -23,35 +23,31 @@ package:
         **Done:**
 
         - splitted to parts: core, console, caching, i18n, web, mail, ...
-        - no more `composer global require fxp/composer-asset-plugin`
-        - no more `require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php'` (done with composer)
-        - no more classes.php (done with composer)
-        - hiqdev/composer-extension-plugin instead of `yii2-composer`
+        - no more `composer global require fxp/composer-asset-plugin`, used `hiqdev/composer-asset-plugin`
+        - no more `require __DIR__ . '/../../vendor/yiisoft/yii2/Yii.php'`, done with composer
+        - no more classes.php, done with composer
         - working for console apps
-        - compatible with phar packaging
+        - compatible with PHAR packaging
 
-        **Changes made:**
+        **Changes to PR to yii2:**
 
-        - use of hiqdev/composer-asset-plugin
         - PHAR compatibility
 
-        **Suggested changes to Yii:**
+        **Changes to think of:**
 
-        - think of breaking up helpers inside of other components:
+        - move helpers into other components:
             - Console to yii2-console
             - Html, Url to yii2-web
-            - HtmlPurifier why not put it inside of Html ?
             - ArrayHelper, StringHelper, Inflector to ???
             - Markdown to yii2-markdown
             - VarDumper to yii2-debug
             - ...
         - drop yii\mail\BaseMailer dependency on yii\web\View for it could be used for console only apps
-        - think of yii\views
         - PSR-3 logging, remove log from core
 
         **To do:**
 
-        - split tests
+        - try split tests into components
         - much more...
 
 require:
