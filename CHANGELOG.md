@@ -1,6 +1,10 @@
 minii/core changelog
 --------------------
 
+## 0.0.4 2016-03-31
+
+- Fixed PHAR compatibility (again)
+
 ## 0.0.3 2016-02-23
 
 - Added views

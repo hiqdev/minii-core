@@ -1,6 +1,13 @@
 minii/core commits history
 --------------------------
 
+## 0.0.4 2016-03-31
+
+- Fixed PHAR compatibility (again)
+    - 87f77e2 2016-03-31 improved project description (sol@hiqdev.com)
+    - e30de1e 2016-03-31 fixed getting classMap (sol@hiqdev.com)
+    - 193cf5d 2016-03-31 fix for phar compatibility (sol@hiqdev.com)
+
 ## 0.0.3 2016-02-23
 
 - Added views
