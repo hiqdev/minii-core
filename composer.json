@@ -29,8 +29,5 @@
         "psr-4": {
             "yii\\": "src"
         }
-    },
-    "replace": {
-        "yiisoft/yii2": "*"
     }
 }
